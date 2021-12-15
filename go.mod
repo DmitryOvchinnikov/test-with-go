@@ -1,3 +1,3 @@
-module test-with-go
+module github.com/dmitryovchinnikov/test-with-go
 
 go 1.17
