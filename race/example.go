@@ -18,9 +18,9 @@ func main() {
 }
 
 func spend(amount int, wg *sync.WaitGroup) {
-	b := &balance
+	b := balance
 	time.Sleep(time.Second)
-	*b -= amount
-	balance = *b
+	b -= amount
+	balance = b
 	wg.Done()
 }
