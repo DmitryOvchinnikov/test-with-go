@@ -15,4 +15,15 @@ func TestA(t *testing.T) {
 	time.Sleep(time.Second)
 }
 
-func TestB(t *testing.T) {}
+func TestB(t *testing.T) {
+	t.Run("sub1", func(t *testing.T) {
+		t.Parallel()
+		time.Sleep(time.Second)
+		// run sub1
+	})
+	t.Run("sub2", func(t *testing.T) {
+		t.Parallel()
+		time.Sleep(time.Second)
+		// run sub2
+	})
+}
